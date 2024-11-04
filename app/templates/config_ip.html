@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configure IP</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Configure Static IP</h1>
+        <form method="POST" action="{{ url_for('set_ip') }}">
+            <input type="text" name="ip_address" placeholder="IP Address" required>
+            <input type="text" name="netmask" placeholder="Netmask" required>
+            <input type="text" name="gateway" placeholder="Gateway" required>
+            <input type="text" name="dns" placeholder="DNS" required>
+            <input type="submit" value="Set IP">
+        </form>
+    </div>
+</body>
+</html>
+
